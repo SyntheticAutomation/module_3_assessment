@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faraday'
 gem 'figaro'
 gem 'pry'
+gem 'vcr'
+gem 'webmock'
 
 group :development, :test do
   gem 'byebug'
