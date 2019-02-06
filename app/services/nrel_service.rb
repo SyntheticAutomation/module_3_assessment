@@ -14,6 +14,7 @@ class NRELService
       req.params['location'] = @zip
       req.params['api_key'] = ENV['nrel_api_key']
       req.params['radius'] = 6.0
+      req.params['fuel_type'] = "ELEC, LPG" #electric and propane stations only
     end
     JSON.parse(response.body, symbolize_names: true)[:fuel_stations].take(10)
   end
