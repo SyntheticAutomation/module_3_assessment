@@ -1,0 +1,10 @@
+<h1><%= @search.stations.count %> Closest Stations </h1>
+<% @search.stations.each do |station| %>
+  <ul class="station">
+    <li class="name">Name: <%= station.name %></li>
+    <li class="address">Address: <%= station.address %></li>
+    <li class="fuel-type">Fuel Types: <%= station.fuel_type %></li>
+    <li class="distance">Distance: <%= station.distance %></li>
+    <li class="access-times">Access Times: <%= station.access_times %></li>
+  </ul>
+<% end %>
