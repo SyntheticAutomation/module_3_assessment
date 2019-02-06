@@ -13,6 +13,7 @@ class NRELService
       req.url "#{destination_uri}"
       req.params['location'] = @zip
       req.params['api_key'] = ENV['nrel_api_key']
+      req.params['radius'] = 6.0
     end
     JSON.parse(response.body, symbolize_names: true)[:fuel_stations].take(10)
   end
